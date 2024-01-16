@@ -1,0 +1,12 @@
+version: '3.1'
+services:
+  postgres:
+    image: postgres:12-alpine
+    ports:
+      - 3300:5432
+    volumes:
+      - ./data:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_DB=data
+      - POSTGRES_USER=vasya
+      - POSTGRES_PASSWORD=qwerty123
